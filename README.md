@@ -1,3 +1,13 @@
+# Tic-Tac-Toe Game
+This is a console-based Tic-Tac-Toe game written in C.
+Running the Game
+ Each player will be asked to enter their move corresponding to the numbers 1-9, which represent the positions on the board as follows:
+ 1 | 2 | 3
+---|---|---
+ 4 | 5 | 6
+---|---|---
+ 7 | 8 | 9
+
 //Minor Project--Tic-Tac-Toe Game
 #include <stdio.h>
 //The Tic-Tac-Toe Board
@@ -67,7 +77,7 @@ char checkWinner(){
         return board[0][2];
     }
     
-  // check whether the board is full
+    // check whether the board is full
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
         if (board[i][j] != 'X' && board[i][j] != 'O') {
@@ -89,7 +99,8 @@ void startGame() {
         print_board();
         playerMove(player);
         char winner = checkWinner();
-         if (winner != ' ') {
+
+ if (winner != ' ') {
             if (winner == 'T') {
                 printf("Game Over! It's a tie.\n");
             } else {
